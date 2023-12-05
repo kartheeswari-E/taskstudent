@@ -2,7 +2,7 @@ const router = express.Router();
 import Home from "../Models/Student.js";
 import express from "express";
 
-router.post("/", async (req, res) => {
+router.post("/add", async (req, res) => {
   try {
     let data = await new Home({ ...req.body }).save();
     res.status(201).send({data:data, message: "data has been added successfully." });
