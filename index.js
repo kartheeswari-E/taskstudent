@@ -16,7 +16,7 @@ app.use(bodyParser.json({limit:'30mb',extended:true}));
 app.use(cors());
 const PORT = 3002;
 
-app.get("/server-admin", function (request, response) {
+app.get("/", function (request, response) {
   response.send("Welcome to the Student Admin server");
 });
 
